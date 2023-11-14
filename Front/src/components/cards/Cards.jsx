@@ -2,7 +2,7 @@ import Card from '../card/Card';
 
 
 
-const Cards = ({characters}) => { //porque aca destructuring? porque en realidad, yo recibo props: { characters: [{}, {}, {}, etc, ]}. Characters llega como un objeto aca, un objeto que es mis props defaults digamos. Por eso aca si destructuro, porque tengo q sacar characters dentro del objeto donde llego.
+const Cards = ({characters, onClose}) => { //porque aca destructuring? porque en realidad, yo recibo props: { characters: [{}, {}, {}, etc, ]}. Characters llega como un objeto aca, un objeto que es mis props defaults digamos. Por eso aca si destructuro, porque tengo q sacar characters dentro del objeto donde llego.
    return (
       <div> 
          {characters.map((char) => ( //Tmb podria ir con destructuring de las propiedades que quisiera q saque de cada char({name, status, gender, etc})
@@ -16,7 +16,7 @@ const Cards = ({characters}) => { //porque aca destructuring? porque en realidad
                   gender = {char.gender}
                   origin = {char.origin}
                   image = {char.image}
-                  onClose={() => alert('Emulamos que se cierra la card')}
+                  onClose={onClose}
             />
          )
          )}
