@@ -1,8 +1,15 @@
+//style
 import './App.css';
+//components
 import Cards from './components/cards/Cards.jsx';
+import Detail from './components/detail/Detail';
 import Nav from './components/nav/Nav';
-import {useState} from 'react';
+import About from './components/about/About';
+import Error from './components/error/Error'
+//dependences
 import axios from 'axios';
+import {useState} from 'react';
+import {Routes, Route} from 'react-router-dom';
 
 
 
@@ -11,20 +18,20 @@ function App() {
 const [characters, setCharacters] = useState([]);
 
 const onSearch = (id) => { 
-  axios(`https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`)
-  .then(
-  ({ data }) => {
-     if (data.name) {
-        if (!characters.some((character) => character.id === data.id)) {
-           setCharacters((oldChars) => [data, ...oldChars]);
-         } else {
-           window.alert("¡Ya existe un personaje con este ID!");
-         }
-       } else {
-         window.alert("¡No hay personajes con este ID!");
-       }
-     });
-   }
+   axios(`https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`)
+   .then(
+   ({ data }) => {
+      if (data.name) {
+         if (!characters.some((character) => character.id === data.id)) {
+            setCharacters((oldChars) => [data, ...oldChars]);
+          } else {
+            window.alert("¡Ya existe un personaje con este ID!");
+          }
+        } else {
+          window.alert("¡No hay personajes con este ID!");
+        }
+      });
+    }
 
 const onClose = (id) => {
 const filteredClose = characters.filter((character) => character.id !== parseInt(id))
@@ -32,9 +39,22 @@ setCharacters(filteredClose)
 }
 
    return (
+
+
       <div className='App'>
+         
          <Nav onSearch = {onSearch}/>
-         <Cards characters={characters} onClose = {onClose}/>
+         
+         <Routes>
+            <Route path='/home' element ={<Cards characters={characters} onClose = {onClose}/>}/>
+            <Route path= '/about' element = {<About/>}/>
+            <Route path= '/detail/:id' element = {<Detail/>}/>
+            <Route path= '*' element = {<Error/>}/>
+
+
+         </Routes>
+
+
       </div>
    );
 }

@@ -1,0 +1,18 @@
+.card {
+   /* Estilos generales de las tarjetas */
+   margin: 10px;
+   padding: 10px;
+   border-radius: 10px; /* Borde redondeado */
+   border-color: aqua;
+   width: 230px;
+   text-align: center; /* Centrar el texto */
+   border: 2px solid aquamarine;
+ }
+ 
+ .card img {
+   /* Ajusta la imagen para que se adapte al contenedor card */
+   width: 100%;
+   height: auto;
+   border-radius: 8px; /* Borde redondeado para la imagen */
+ }
+ 
