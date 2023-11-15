@@ -14,13 +14,24 @@ setId (event.target.value)
    return numeroEnRango;
  }
  
+const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
+   event.preventDefault(); //event es solo para esta linea.
+   onSearch(id); //hago el onSearch, como lo hacia antes pero lo ponia directo en el onClick
+   setId(''); //Lo dejo vacio luego de que lo busque. No puedo ponerlo en handleChange porq lo harai acada vez q hay una
+}}
 
    return (
       <div>
-         <input type='search' value = {id} onChange = {handleChange}/>
-         <button onClick={() => onSearch(id)}>Agregar</button> 
+         <input 
+         type='search' 
+         name='search'
+         id='search'
+         value = {id} 
+         onChange = {handleChange}
+         />
+         <button onClick={handleClick}>Agregar</button> 
          {/* Lo traigo dsp de una funcion flecha porque tengo q pasar una funcion que ejecute a esa funcion, si no se va aejecutar apenas monto el componente. */}
-         <button onClick={() => onSearch(randomNumber())}>Random</button> 
+         <button onClick={() => onSearch(randomNumber())}> 🎁 </button> 
       </div>
    );
 }
