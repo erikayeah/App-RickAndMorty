@@ -6,12 +6,11 @@ import {useState, useEffect} from 'react';
 const Detail = () => {
 
    const {id} = useParams();
-   
-
-   const [character, setCharacter] = useState([]);
+   const [character, setCharacter] = useState({});
 
    useEffect(() => {
-      axios(`https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`).then(
+      axios(`https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`)
+      .then(
          ({ data }) => {
             if (data.name) {
                setCharacter(data);
@@ -25,7 +24,7 @@ const Detail = () => {
 
    return (
       <div>
-
+{/* traemos con character. porque ahora es nuestro estado local, character, quien tiene la info de data, asi lo seteamos. */}
       <h2> {character?.name} </h2>
       <h3>Status: {character?.status}</h3>
       <h3>Species: {character?.species}</h3>

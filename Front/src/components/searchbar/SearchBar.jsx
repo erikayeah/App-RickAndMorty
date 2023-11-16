@@ -9,7 +9,7 @@ const SearchBar = ({onSearch}) => { //como props es un objeto con cosas, tengo q
 setId (event.target.value)
  }  
 
- function randomNumber() {
+ function handleRandom() {
    const numeroEnRango = Math.floor(Math.random()* 826) + 1;
    return numeroEnRango;
  }
@@ -31,7 +31,7 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
          />
          <button onClick={handleClick}>Agregar</button> 
          {/* Lo traigo dsp de una funcion flecha porque tengo q pasar una funcion que ejecute a esa funcion, si no se va aejecutar apenas monto el componente. */}
-         <button onClick={() => onSearch(randomNumber())}> 🎁 </button> 
+         <button onClick={() => onSearch(handleRandom())}> 🎁 </button> 
       </div>
    );
 }

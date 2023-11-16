@@ -6,14 +6,14 @@ const Card = ({name, id, status, species, gender, origin, image, onClose}) => { 
    return (
       <div className = {style.card}>
          <button onClick={() => onClose(id) }> X </button>
-         <Link to={`/detail/${id}`} >
           <h2> {name}</h2>
+         <Link to={`/detail/${id}`} >
+         <img src={image} alt={name} />
          </Link>
-         <h3> Status: {status}</h3>
+         {/* <h3> Status: {status}</h3>
          <h3> Species: {species}</h3>
          <h3> Gender: {gender}</h3>
-         <h3> Origin: {origin.name}</h3>
-         <img src={image} alt={name} />
+         <h3> Origin: {origin.name}</h3> */}
       </div>
    );
 }
