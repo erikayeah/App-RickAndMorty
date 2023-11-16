@@ -2,7 +2,7 @@ import SearchBar from '../searchbar/SearchBar';
 import {Link} from 'react-router-dom';
 
 
-const Nav = ({onSearch}) => {
+const Nav = ({onSearch, logOut}) => {
 
 
    return (
@@ -17,6 +17,10 @@ const Nav = ({onSearch}) => {
          </Link>
 
          <SearchBar onSearch = {onSearch}/>
+
+      
+         <button onClick = {() => logOut()}> Log out </button>
+         
 
       </div>
    )
