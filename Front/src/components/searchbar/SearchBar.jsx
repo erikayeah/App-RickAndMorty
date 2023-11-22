@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import styles from './SearchBar.module.css'
 
 
 const SearchBar = ({onSearch}) => { //como props es un objeto con cosas, tengo que sacar a OnSearch con destructuring. Si no, deberia poner props.onSearch
@@ -22,16 +23,22 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
 
    return (
       <div>
-         <input 
+         <button className={styles.button} onClick={() => onSearch(handleRandom())}> 🎁 </button> 
+         {/* Lo traigo dsp de una funcion flecha porque tengo q pasar una funcion que ejecute a esa funcion, si no se va aejecutar apenas monto el componente. */}
+         
+         
+         <input
+         placeholder='ID' 
+         className={styles.input}
          type='search' 
          name='search'
          id='search'
          value = {id} 
          onChange = {handleChange}
          />
-         <button onClick={handleClick}>Agregar</button> 
-         {/* Lo traigo dsp de una funcion flecha porque tengo q pasar una funcion que ejecute a esa funcion, si no se va aejecutar apenas monto el componente. */}
-         <button onClick={() => onSearch(handleRandom())}> 🎁 </button> 
+      
+
+         <button className={styles.button} onClick={handleClick}>Agregar</button> 
       </div>
    );
 }

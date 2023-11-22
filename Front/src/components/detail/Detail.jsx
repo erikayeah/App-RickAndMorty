@@ -26,6 +26,7 @@ const Detail = () => {
       <div>
 {/* traemos con character. porque ahora es nuestro estado local, character, quien tiene la info de data, asi lo seteamos. */}
       <h2> {character?.name} </h2>
+      <h3>ID: {character?.id}</h3>
       <h3>Status: {character?.status}</h3>
       <h3>Species: {character?.species}</h3>
       <h3>Gender: {character?.gender}</h3>

@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import validation from "../../utils/validation";
 
 const Form = ({ login }) => {
+
+  useEffect(() => {
+    document.body.style.backgroundImage = `url('/src/assets/image/form.jpg')`;
+    return () => {
+      document.body.style.backgroundImage = null
+    }
+  }, []);
+
   const [userData, setUserData] = useState({
     email: "",
     password: "",

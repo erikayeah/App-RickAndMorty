@@ -2,44 +2,28 @@
 import "./App.css";
 //components
 import About from "./components/about/About";
-import Cards from "./components/cards/Cards.jsx";
+import Cards from "./components/cards/Cards";
 import Detail from "./components/detail/Detail";
 import Error from "./components/error/Error";
 import Form from "./components/form/Form";
 import Nav from "./components/nav/Nav";
+import Favorites from './components/favorites/Favorites';
+
 //dependences
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFav } from "./redux/action";
 
 function App() {
-  const [characters, setCharacters] = useState([]);
-  const [access, setAccess] = useState(false);
-  const EMAIL = "henry@gmail.com";
-  const PASSWORD = "clave123";
-
+  
   const navigate = useNavigate();
   const { pathname } = useLocation();
-
-  const login = (userData) => {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate("/home");
-    } else {
-      alert('credenciales incorrectas'); //Para avisar que algo esta incorrecto.
-    }
-  };
-
-  const logout = () => {
-    setAccess(false);
-    setCharacters([]); //Para que se resetee home si hago logOut.
-  };
+  const dispatch = useDispatch();
   
-  useEffect(() => {
-    !access && navigate("/");
-    //* !access && navigate("/home"); //Logueo automatico: si ya probe que mi logueo anda, pongo esto para no tener q cargar datos cada vez que sigo probando otras cosas. Es hasta antes de sacarlo a produccion.
-  }, [access]);
-
+  const [characters, setCharacters] = useState([]);
+  
   const onSearch = (id) => {
     axios(
       `https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`
@@ -62,21 +46,47 @@ function App() {
       (character) => character.id !== parseInt(id)
     );
     setCharacters(filteredClose);
+    dispatch(removeFav(id)); //Esta linea hace que si lo elimino de home, se me elimina de favoritos tmb
   };
+
+
+//*LOGIN
+  const [access, setAccess] = useState(false);
+  const EMAIL = "henry@gmail.com";
+  const PASSWORD = "clave123";
+
+
+  const login = (userData) => {
+    if (userData.password === PASSWORD && userData.email === EMAIL) {
+      setAccess(true);
+      navigate("/home");
+    } else {
+      alert('credenciales incorrectas'); //Para avisar que algo esta incorrecto.
+    }
+  };
+
+  const logout = () => {
+    setAccess(false);
+    setCharacters([]); //Para que se resetee home si hago logOut.
+  };
+  
+  useEffect(() => {
+    //* !access && navigate("/"); ASI DEBERIA QUEDAR LUEGO
+    !access && navigate("/home"); //Logueo momentaneo automatico: si ya probe que mi logueo anda, pongo esto para no tener q cargar datos cada vez que sigo probando otras cosas. Es hasta antes de sacarlo a produccion.
+  }, [access]);
+
 
   return (
     <div className="App">
       {pathname !== "/" ? <Nav onSearch={onSearch} logout={logout} /> : null}
 
       <Routes>
-        <Route
-          path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
-        />
+        <Route path="/" element={<Form login={login} />} />
+        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites onClose={onClose} />} />
         <Route path="*" element={<Error />} />
-        <Route path="/" element={<Form login={login} />} />
       </Routes>
     </div>
   );
