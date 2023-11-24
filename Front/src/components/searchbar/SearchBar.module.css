@@ -16,9 +16,11 @@
   box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
               0 0 1em 0.2em var(--glow-spread-color), 
               inset 0 0 0.1em 0.05em var(--glow-color); 
-   text-shadow: 0 0 .3em var(--glow-color);
+   text-shadow: 0 0 .1em var(--glow-color);
    position: relative;
    transition: all 0.5s;
+   opacity: 0.72;
+   font-weight: bold;
   }
   
 
@@ -53,7 +55,9 @@
   box-shadow: 0 0 0.2em 0.1em var(--glow-color), /* Sombras externas más pequeñas */
               0 0 1em 0.2em var(--glow-spread-color), /* Sombras externas más grandes */
               inset 0 0 0.1em 0.05em var(--glow-color); 
-   text-shadow: 0 0 .3em var(--glow-color);
+   /* text-shadow: 0 0 .3em var(--glow-color); */
    position: relative;
    transition: all 0.5s;
+   opacity: 0.72;
+   font-weight: bold;
 }
