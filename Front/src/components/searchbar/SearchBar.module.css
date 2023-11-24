@@ -13,8 +13,8 @@
    background-color: var(--btn-color);
    border-radius: 10px;
    outline: none;
-  box-shadow: 0 0 0.2em 0.1em var(--glow-color), /* Sombras externas más pequeñas */
-              0 0 1em 0.2em var(--glow-spread-color), /* Sombras externas más grandes */
+  box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
+              0 0 1em 0.2em var(--glow-spread-color), 
               inset 0 0 0.1em 0.05em var(--glow-color); 
    text-shadow: 0 0 .3em var(--glow-color);
    position: relative;
