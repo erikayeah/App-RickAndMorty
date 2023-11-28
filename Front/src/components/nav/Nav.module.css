@@ -1,6 +1,6 @@
-/* nav.module.css */
+
 .navbar {
-   position: fixed; /* Fija la barra de navegación en la parte superior */
+   position: fixed; 
    font-family: 'Patrick Hand SC';
    top: 0;
    left: 0;
@@ -8,8 +8,8 @@
    display: flex;
    justify-content: space-between; 
    align-items: center;
-   background-color: rgba(235, 88, 167, 0.2);; /* Color de fondo de la barra */
-   padding: 15px; /* Espaciado interno */
+   /* background-color: rgba(235, 88, 167, 0.2);;  */
+   padding: 15px; 
    margin-bottom: 10px;
  }
  
@@ -23,6 +23,7 @@
    --btn-color: #0f0008;
    border: .1em solid var(--glow-color);
    padding: 10px;
+   font-weight: bold;
    color: var(--glow-color);
    font-size: 18px;
    margin: 5px;
@@ -31,27 +32,14 @@
    background-color: var(--btn-color);
    border-radius: 10px;
    outline: none;
-  box-shadow: 0 0 0.2em 0.1em var(--glow-color), /* Sombras externas más pequeñas */
-              0 0 1em 0.2em var(--glow-spread-color), /* Sombras externas más grandes */
+  box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
+              0 0 1em 0.2em var(--glow-spread-color), 
               inset 0 0 0.1em 0.05em var(--glow-color); 
-   text-shadow: 0 0 .3em var(--glow-color);
+   text-shadow: 0 0 .1em var(--glow-color);
    position: relative;
    transition: all 0.5s;
+   opacity: 0.72;
   }
-  
-  /* .button::after {
-   pointer-events: none;
-   content: "";
-   position: absolute;
-   top: 120%;
-   left: 0;
-   height: 100%;
-   width: 100%;
-   background-color: var(--glow-spread-color);
-   filter: blur(0.5em);
-   opacity: .4;
-   transform: perspective(1.5em) rotateX(35deg) scale(0.5, 0.4);
-  } */
   
   .button:hover {
    color: var(--btn-color);

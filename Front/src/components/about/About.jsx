@@ -1,4 +1,4 @@
-
+import styles from './About.module.css';
 
 const About = () => {
 
@@ -7,6 +7,7 @@ const About = () => {
 
       <div>
          <h1>App construida por Erika Judith Fogar</h1>
+         
       </div>
    )
 }

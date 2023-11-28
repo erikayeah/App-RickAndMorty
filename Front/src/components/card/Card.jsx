@@ -46,19 +46,20 @@ if (myFavorites[i].id === props.id) {
 
    
    return (
-      <div className = {style.card}>
+      <div className={style.containerCard}>
 
-         {isFav ? (<button onClick={handleFavorite}>❤️</button>) 
-         : (<button onClick={handleFavorite}>🤍</button>)}
+         {isFav ? (<button className={style.buttonCard} onClick={handleFavorite}>❤️</button>) 
+         : (<button className={style.buttonCard} onClick={handleFavorite}>🤍</button>)}
 
          {/* {pathname !== '/favorites' ? <button onClick={() => onClose(id) }> X </button> : ''} */}
-         < button onClick={() => onClose(id) }> X </button>
+         < button className={style.buttonCard} onClick={() => onClose(id) }> X </button>
 
-          <h2> {name}</h2>
-          {/* <h3>{gender}</h3> */}
          <Link to={`/detail/${id}`} >
-         <img src={image} alt={name} />
+         <img className = {style.imageCard} src={image} alt={name} />
          </Link>
+         
+          <h2 className={style.nameCard}> {name}</h2>
+          {/* <h3>{gender}</h3> */}
       </div>
    );
 }

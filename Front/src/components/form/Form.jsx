@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import validation from "../../utils/validation";
+import styles from './Form.module.css';
 
 const Form = ({ login }) => {
 
@@ -37,36 +38,43 @@ const Form = ({ login }) => {
   };
 
   return (
-    <div>
+    <div className={styles.form}>
+      <img src="src/assets/image/FormFrase.png" width="50%"  />
+
       <form onSubmit={hanleSubmit}>
         <label> Email </label>
         <input
+          className={styles.input}
           type="text"
           key="email"
           name="email"
           value={userData.email}
-          placeholder="Ingrese su email"
+          // placeholder="Ingrese su email"
           onChange={handleChange}
         />
-        <p style={{ color: "coral" }}>{errors.email ? errors.email : null}</p>
+        
+        {errors.email && <p className={styles.error}>{errors.email}</p>}
+        <hr className={styles.hr} />
 
         <label> Password </label>
         <input
+          className={styles.input}
           type="password"
           key="password"
           name="password"
-          placeholder="ingrese su contraseña"
+          // placeholder="ingrese su contraseña"
           value={userData.password}
           onChange={handleChange}
         />
-        <p style={{ color: "coral" }}>{errors.password && errors.password}</p>
+        {errors.email && <p className={styles.error}>{errors.password}</p>}
 
-        <br />
+        <hr className={styles.hr} />
         
         <button 
+        className={styles.button}
         type="submit"
-        disabled={errors.email || errors.password} // Si existe error en email o password deshabilitalo
-        > Ingresar </button>
+        disabled={ errors.email || errors.password} // Si existe error en email o password deshabilitalo
+        >Ingresar </button>
       </form>
     </div>
   );
