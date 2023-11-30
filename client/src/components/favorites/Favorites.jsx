@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { filterCards, orderCards } from "../../redux/action";
 import Card from "../card/Card";
+import style from './Favorites.module.css'
 
 
 const Favorites = ({onClose}) => {
@@ -38,7 +39,7 @@ const Favorites = ({onClose}) => {
             </select>
          </div>
 
-         <div> 
+         <div className = {style.container}> 
           {/* DIV DEL CARD */}
 
             { !myFavorites.length

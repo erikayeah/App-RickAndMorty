@@ -2,7 +2,7 @@ import {useState} from 'react';
 import styles from './SearchBar.module.css'
 
 
-const SearchBar = ({onSearch}) => { //como props es un objeto con cosas, tengo que sacar a OnSearch con destructuring. Si no, deberia poner props.onSearch
+const SearchBar = ({onSearch, clear}) => { //como props es un objeto con cosas, tengo que sacar a OnSearch con destructuring. Si no, deberia poner props.onSearch
    
  const [id, setId] = useState('');
    
@@ -15,6 +15,10 @@ setId (event.target.value)
    return numeroEnRango;
  }
  
+const handleClear = () => {
+clear()
+}
+
 const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
    event.preventDefault(); //event es solo para esta linea.
    onSearch(id); //hago el onSearch, como lo hacia antes pero lo ponia directo en el onClick
@@ -39,6 +43,8 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
       
 
          <button className={styles.button} onClick={handleClick}>Agregar</button> 
+
+         <button className={styles.button} onClick={handleClear}>Limpiar</button> 
       </div>
    );
 }

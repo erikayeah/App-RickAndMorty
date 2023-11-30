@@ -2,11 +2,11 @@ import SearchBar from "../searchbar/SearchBar";
 import { Link } from "react-router-dom";
 import styles from './Nav.module.css';
 
-const Nav = ({ onSearch, logout }) => {
+const Nav = ({ onSearch, logout , clear}) => {
   return (
     <nav className={styles.navbar}>
       
-      <SearchBar onSearch={onSearch} />
+      <SearchBar onSearch={onSearch} clear ={clear}/>
 
       <div className={styles.right}>
       <Link to="/home">

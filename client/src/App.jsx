@@ -69,16 +69,22 @@ function App() {
     setAccess(false);
     setCharacters([]); //Para que se resetee home si hago logOut.
   };
+
+  const clear = () => {
+    setCharacters([])
+    //navigate("/home"); //Ver si al limpiar hago redireccione a home o no
+  }
   
   useEffect(() => {
     //* !access && navigate("/"); ASI DEBERIA QUEDAR LUEGO
     !access && navigate("/home"); //Logueo momentaneo automatico: si ya probe que mi logueo anda, pongo esto para no tener q cargar datos cada vez que sigo probando otras cosas. Es hasta antes de sacarlo a produccion.
   }, [access]);
 
+console.log(characters);
 
   return (
     <div className="App">
-      {pathname !== "/" ? <Nav onSearch={onSearch} logout={logout} /> : null}
+      {pathname !== "/" ? <Nav onSearch={onSearch} logout={logout} clear ={clear} /> : null}
 
       <Routes>
         <Route path="/" element={<Form login={login} />} />
