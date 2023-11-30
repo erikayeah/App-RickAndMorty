@@ -17,7 +17,7 @@ const Cards = ({characters, onClose}) => { //porque aca destructuring? porque en
                   status = {char.status}
                   species = {char.species}
                   gender = {char.gender}
-                  origin = {char.origin}
+                  origin = {char.origin.name}
                   image = {char.image}
                   onClose={onClose}
             />
