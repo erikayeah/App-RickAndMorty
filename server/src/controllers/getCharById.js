@@ -3,16 +3,19 @@ const axios = require('axios');
 
 const getCharById = (res, id) => {
 
-   axios.get(`https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`)
+   axios.get(`https://rym2.up.railway.app/api/character/${id}?key=pi-erikayeah`) 
+   //* Retorna una promesa en esatdo pending. Si quieroq ue resuelva y me traiga o de la caja verde o roja, sigue el .then
       .then( ({data}) => {
+         //* res seria mi caja verde.
       const character = {
-            id,
+            id: data.id, // O es id: data.id
             name: data.name,
             gender: data.gender,
             species: data.species,
-            origin: data.origin.name,
+            origin: data.origin,
             status: data.status,
-            image: data.image
+            image: data.image,
+            location: data.location
          };
 
          return res
