@@ -8,9 +8,8 @@ border: 2px solid #EB58A7 ;
 padding: 10px; 
 width: 200px;
 margin: 10px;
-background-image: url('../../assets/image/CardSearchbar.jpg');
-background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
-background-position: center; 
+background: transparent;
+backdrop-filter: blur(8px);
 
 }
 
