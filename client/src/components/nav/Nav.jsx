@@ -8,7 +8,7 @@ const Nav = ({ onSearch, logout }) => {
       
       <SearchBar onSearch={onSearch} />
 
-      <div className={styles.left}>
+      <div className={styles.right}>
       <Link to="/home">
         <button className={styles.button}> Home </button>
       </Link>

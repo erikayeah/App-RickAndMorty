@@ -64,7 +64,7 @@
    color: #f76ab5;
  }
 
- .left {
+ .right {
    display: flex;
    justify-content: space-between; 
    align-items: center;
