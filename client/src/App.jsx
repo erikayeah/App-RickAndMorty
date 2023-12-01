@@ -72,7 +72,7 @@ function App() {
 
   const clear = () => {
     setCharacters([])
-    //navigate("/home"); //Ver si al limpiar hago redireccione a home o no
+    navigate("/home"); //Ver si al limpiar hago redireccione a home o no
     dispatch(removeAllFav())
   }
   

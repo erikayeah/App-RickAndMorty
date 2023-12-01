@@ -26,7 +26,6 @@ const reducer = (state = initialState, {type, payload}) => {
                myFavorites: filteredFavs
             }
          }
-//! inicia modificacion
 
          case REMOVE_ALL_FAV:{
                return {
@@ -35,9 +34,6 @@ const reducer = (state = initialState, {type, payload}) => {
                   myFavorites: []
                }
             }
-
-
-//! termina modificacion
 
          case FILTER:{
             //* { type: FILTER, payload: "FEMALE" }

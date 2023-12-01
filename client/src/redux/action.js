@@ -14,14 +14,13 @@ export const removeFav = (id) => {
    }
 };
 
-//! inicia modificacion
 
 export const removeAllFav = () => {
    return {
       type: REMOVE_ALL_FAV,
    }
 };
-//! termina modificacion
+
 
 export const filterCards = (gender) => {
    return {
