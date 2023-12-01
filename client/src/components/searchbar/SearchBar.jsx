@@ -44,7 +44,7 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
 
          <button className={styles.button} onClick={handleClick}>Agregar</button> 
 
-         <button className={styles.button} onClick={handleClear}>Limpiar</button> 
+         <button className={styles.button} onClick={handleClear}>Reset</button> 
       </div>
    );
 }

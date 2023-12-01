@@ -14,7 +14,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFav } from "./redux/action";
+import { removeFav , removeAllFav } from "./redux/action";
 
 function App() {
   
@@ -73,6 +73,7 @@ function App() {
   const clear = () => {
     setCharacters([])
     //navigate("/home"); //Ver si al limpiar hago redireccione a home o no
+    dispatch(removeAllFav())
   }
   
   useEffect(() => {
@@ -80,7 +81,7 @@ function App() {
     !access && navigate("/home"); //Logueo momentaneo automatico: si ya probe que mi logueo anda, pongo esto para no tener q cargar datos cada vez que sigo probando otras cosas. Es hasta antes de sacarlo a produccion.
   }, [access]);
 
-console.log(characters);
+
 
   return (
     <div className="App">

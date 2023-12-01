@@ -1,4 +1,4 @@
-import {ADD_FAV, REMOVE_FAV, FILTER, ORDER} from './action-types';
+import {ADD_FAV, REMOVE_FAV, FILTER, ORDER, REMOVE_ALL_FAV} from './action-types';
 
 
 const initialState = {
@@ -26,6 +26,18 @@ const reducer = (state = initialState, {type, payload}) => {
                myFavorites: filteredFavs
             }
          }
+//! inicia modificacion
+
+         case REMOVE_ALL_FAV:{
+               return {
+                  ...state,
+                  allCharacters: [],
+                  myFavorites: []
+               }
+            }
+
+
+//! termina modificacion
 
          case FILTER:{
             //* { type: FILTER, payload: "FEMALE" }
