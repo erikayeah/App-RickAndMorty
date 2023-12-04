@@ -1,17 +1,29 @@
-const http = require("http");
+const express = require("express"); //instalar express
+const morgan = require("morgan"); // instalar morgan
+const router = require("./routes");
+//* const router = require("./routes/index.js");
+const server = express();
 const PORT = 3001;
-const {getCharById} = require('./controllers/getCharById')
 
-http.createServer((req, res) => {
-   res.setHeader('Access-Control-Allow-Origin', '*'); //Le da acceso al front. Con * digo q cualquiera puede acceder.
+//* Middlewares
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header(
+     'Access-Control-Allow-Headers',
+     'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  res.header(
+     'Access-Control-Allow-Methods',
+     'GET, POST, OPTIONS, PUT, DELETE'
+  );
+  next();
+});
+server.use(express.json());
+server.use(morgan("dev"));
 
-   if (req.url.includes('/rickandmorty/character')){
-      const id = req.url.split('/').pop(); //.at(-1) tambien.
-      getCharById(res,id);
-    }
-})
-   .listen(PORT, '127.0.0.1'//,
-   //() => (console.log(`Server listening on port ${PORT}`)) //Este es un cb extra que nos dio el profe. un mensajito extra.
-); //Siempre cierro con .listen y debo pasarle el port, y la mascara de subred. el numero, o localhost.
+server.use("/rickandmorty", router);
 
-
+server.listen(PORT, () => {
+   console.log('Server raised in port: ' + PORT);
+});
