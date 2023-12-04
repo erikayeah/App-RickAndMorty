@@ -14,9 +14,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFav , removeAllFav } from "./redux/action";
+import { removeFav } from "./redux/action";
 
-function App() {
+const App = () => {
   
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -25,9 +25,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   
   const onSearch = (id) => {
-    axios(
-      `http://localhost:3001/rickandmorty/character/${id}`
-    ).then(({ data }) => {
+    axios(`http://localhost:3001/rickandmorty/character/${id}`)
+    .then(({ data }) => {
       if (data.name) {
         if (!characters.some((character) => character.id === data.id)) {
           setCharacters((oldChars) => [data, ...oldChars]);
@@ -52,18 +51,25 @@ function App() {
 
 //*LOGIN
   const [access, setAccess] = useState(false);
-  const EMAIL = "henry@gmail.com";
-  const PASSWORD = "clave123";
+  // const EMAIL = "henry@gmail.com";
+  // const PASSWORD = "clave123";
 
 
-  const login = (userData) => {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate("/home");
-    } else {
-      alert('credenciales incorrectas'); //Para avisar que algo esta incorrecto.
-    }
-  };
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`)
+       .then(({ data }) => {
+          const { access } = data;
+          if(access) {
+             setAccess(data);
+             access && navigate('/home');
+          } else {
+             alert("Credenciales incorrectas!");
+          }
+       });
+ }
+
 
   const logout = () => {
     setAccess(false);
@@ -73,7 +79,6 @@ function App() {
   const clear = () => {
     setCharacters([])
     navigate("/home"); //Ver si al limpiar hago redireccione a home o no
-    dispatch(removeAllFav())
   }
   
   useEffect(() => {

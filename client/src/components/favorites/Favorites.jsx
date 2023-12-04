@@ -20,7 +20,7 @@ const Favorites = ({onClose}) => {
 
    return (
 
-   <div> 
+   <div className={style.container}> 
          {/* DIV que encierra todo */}
 
          <div>
@@ -39,7 +39,7 @@ const Favorites = ({onClose}) => {
             </select>
          </div>
 
-         <div className = {style.container}> 
+         <div className = {style.containerCard}> 
           {/* DIV DEL CARD */}
 
             { !myFavorites.length
