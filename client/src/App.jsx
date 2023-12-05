@@ -23,22 +23,46 @@ const App = () => {
   const dispatch = useDispatch();
   
   const [characters, setCharacters] = useState([]);
+
+
+  async function onSearch(id) {
+    try {
+       //* Verificar si existe character:
+       const characterId = characters.filter(
+          char => char.id === Number(id)
+       )
+       if(characterId.length) {
+          return alert(`${characterId[0].name} ya existe!`)
+       }
+
+       const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+       if (data.name) {
+          setCharacters([...characters, data]);
+          navigate("/home");
+       } else {
+          alert('¡El id debe ser un número entre 1 y 826!');
+       }
+    } catch (error) {
+       alert("¡El id debe ser un número entre 1 y 826!");
+    }
+ }
   
-  const onSearch = (id) => {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`)
-    .then(({ data }) => {
-      if (data.name) {
-        if (!characters.some((character) => character.id === data.id)) {
-          setCharacters((oldChars) => [data, ...oldChars]);
-        } else {
-          window.alert("¡Ya existe un personaje con este ID!");
-        }
-      } else {
-        window.alert("¡El ID debe ser un numero entre 1 y 826!");
-      }
-    });
-    navigate("/home"); //para que al agregar un id o random, me lleve de nuevo a home a las cartas.
-  };
+//   const onSearch = async (id) => {
+//   try {
+//   const {data} = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`) // Para desestructurar data, necesito si o si el await.
+
+//       if (data.name) {
+//         if (!characters.some((character) => character.id === data.id)) {
+//           setCharacters((oldChars) => [data, ...oldChars]);
+//         } else {
+//           window.alert("¡Ya existe un personaje con este ID!");
+//         }
+//       };
+//     navigate("/home"); //para que al agregar un id o random, me lleve de nuevo a home a las cartas.
+//   } catch (error) {
+//     indow.alert("¡El id debe ser un numero entre el 1 y el 826!");
+//   }
+// }
 
   const onClose = (id) => {
     const filteredClose = characters.filter(
@@ -55,20 +79,25 @@ const App = () => {
   // const PASSWORD = "clave123";
 
 
-  function login(userData) {
+const login = async (userData) => {
+  try {
     const { email, password } = userData;
     const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`)
-       .then(({ data }) => {
-          const { access } = data;
-          if(access) {
-             setAccess(data);
-             access && navigate('/home');
-          } else {
-             alert("Credenciales incorrectas!");
-          }
-       });
- }
+    const response = await axios.get(URL + `?email=${email}&password=${password}`);
+    const {data} = response;
+    const { access } = data;
+
+    if(access) {
+        setAccess(data);
+        navigate('/home');
+    } else {
+        alert("Credenciales incorrectas!");
+    }
+  } catch (error) {
+      throw error;
+     }
+    };
+
 
 
   const logout = () => {
