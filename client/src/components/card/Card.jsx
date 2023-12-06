@@ -52,7 +52,7 @@ if (myFavorites[i].id === props.id) {
          : (<button className={style.buttonCard} onClick={handleFavorite}>🤍</button>)}
 
          {/* {pathname !== '/favorites' ? <button onClick={() => onClose(id) }> X </button> : ''} */}
-         < button className={style.buttonCard} onClick={() => onClose(id) }> X </button>
+         < button className={style.buttonCard} onClick={() => onClose(id) }> ❌ </button>
 
          <Link to={`/detail/${id}`} >
          <img className = {style.imageCard} src={image} alt={name} />

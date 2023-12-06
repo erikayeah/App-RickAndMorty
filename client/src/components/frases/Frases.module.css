@@ -1,0 +1,48 @@
+.button {
+   padding: 10px 15px;
+   font-family: 'Lato';
+   border: none;
+   font-size: 15px;
+   color: #fff5cb;
+   border-radius: 7px;
+   font-weight: bold;
+   text-transform: uppercase;
+   transition: 0.5s;
+   transition-property: box-shadow;
+   background: transparent;
+   backdrop-filter: blur(1px);
+   box-shadow: 0 0 10px #fff5cb;
+   cursor: pointer;
+ }
+ 
+ .button:hover {
+   box-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb,
+     0 0 100px #fff5cb;
+ }
+
+ .container {
+   display: flex;
+   width: 600px; /* Establece un ancho fijo */
+  height: 200px; /* Establece una altura fija */
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  margin-bottom: 15px;
+   /* justify-content: center;
+   align-items: center;
+   height: 110px; */
+ }
+
+ .frase{
+   margin-right: 40px;
+   font-size: 25px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 440px; /* Establece un ancho fijo */
+  height: 200px;
+  font-family: 'Patrick Hand SC';
+  font-style: italic;
+  border-radius: 20px;
+  color: #fff5cb;
+ }

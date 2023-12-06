@@ -26,6 +26,11 @@ body {
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
   font-family: 'Patrick Hand SC';
   letter-spacing: 1px;
+  
 }
 
 
+::selection {
+  background-color: #7EC34D;
+  color: #180D21;
+}

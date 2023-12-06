@@ -1,14 +1,18 @@
-
+.body{
+  padding: 60px;
+}
 .form {
   border-radius: 10px;
   color: #fff5cb;
   font-size: 25px;
-  padding: 10px;
+  padding: 20px;
   padding-bottom: 25px;
-  background-color: rgba(66, 20, 139, 0.1);
+  margin-top: 20px;
+  background-color: rgba(207, 201, 216, 0.1);
   box-shadow: 0 0 25px #fff5cb;
   transition: 0.5s;
   transition-property: box-shadow;
+  margin-bottom: 40px;
 }
 
 .form:hover {
@@ -17,9 +21,10 @@
 }
 
 .error {
-  color: #fff5cb;
+  color: #9e47ae;
   /* font-weight: bold; */
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .hr {
@@ -38,9 +43,7 @@
   text-transform: uppercase;
   transition: 0.5s;
   transition-property: box-shadow;
-}
-
-.button {
+  cursor: pointer;
   background: #9e47ae;
   box-shadow: 0 0 25px #fff5cb;
 }

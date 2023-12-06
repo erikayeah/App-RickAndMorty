@@ -1,72 +1,77 @@
 
 .navbar {
-   position: fixed; 
-   font-family: 'Patrick Hand SC';
-   top: 0;
-   left: 0;
-   right: 0;
-   display: flex;
-   justify-content: space-between; 
-   align-items: center;
-   /* background-color: rgba(235, 88, 167, 0.2);;  */
-   padding: 15px; 
-   margin: 10px;
+  position: fixed; 
+  font-family: 'Patrick Hand SC';
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  /* background-color: rgba(235, 88, 167, 0.2);;  */
+  padding: 10px; 
+  margin-bottom: 10px;
+  z-index: 1;
+  background: transparent;
+backdrop-filter: blur(100px);
+  
+}
+
+
+
+.button {
+  font-family: 'Patrick Hand SC';
+  --glow-color: #f76ab5;
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: #0f0008;
+  border: .1em solid var(--glow-color);
+  padding: 10px;
+  font-weight: bold;
+  color: var(--glow-color);
+  font-size: 18px;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--btn-color);
+  border-radius: 10px;
+  outline: none;
+ box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
+             0 0 1em 0.2em var(--glow-spread-color), 
+             inset 0 0 0.1em 0.05em var(--glow-color); 
+  text-shadow: 0 0 .1em var(--glow-color);
+  position: relative;
+  transition: all 0.5s;
+  opacity: 0.72;
+  cursor: pointer;
  }
  
+ .button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .2em var(--glow-color),
+         0 0 2em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
  
- 
-.button {
-   font-family: 'Patrick Hand SC';
-   --glow-color: #f76ab5;
-   --glow-spread-color: rgba(191, 123, 255, 0.781);
-   --enhanced-glow-color: rgb(231, 206, 255);
-   --btn-color: #0f0008;
-   border: .1em solid var(--glow-color);
-   padding: 10px;
-   font-weight: bold;
-   color: var(--glow-color);
-   font-size: 18px;
-   margin: 5px;
-   margin-left: 10px;
-   margin-right: 10px;
-   background-color: var(--btn-color);
-   border-radius: 10px;
-   outline: none;
-  box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
-              0 0 1em 0.2em var(--glow-spread-color), 
-              inset 0 0 0.1em 0.05em var(--glow-color); 
-   text-shadow: 0 0 .1em var(--glow-color);
-   position: relative;
-   transition: all 0.5s;
-   opacity: 0.72;
-  }
-  
-  .button:hover {
-   color: var(--btn-color);
-   background-color: var(--glow-color);
-   box-shadow: 0 0 1em .2em var(--glow-color),
-          0 0 2em 1em var(--glow-spread-color),
-          inset 0 0 .75em .25em var(--glow-color);
-  }
-  
-  .button:active {
-   box-shadow: 0 0 0.6em .25em var(--glow-color),
-          0 0 2.5em 2em var(--glow-spread-color),
-          inset 0 0 .5em .25em var(--glow-color);
-  }
- 
- .input {
-   font-family: 'Patrick Hand SC';
-   padding: 10px;
-   font-weight: bold;
-   margin: 15px;
-   font-size: 18;
-   color: #f76ab5;
+ .button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
  }
 
- .right {
-   display: flex;
-   justify-content: space-between; 
-   align-items: center;
-   
- }
+.input {
+  font-family: 'Patrick Hand SC';
+  padding: 10px;
+  font-weight: bold;
+  margin: 15px;
+  font-size: 18;
+  color: #f76ab5;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  
+}

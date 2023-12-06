@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import validation from "../../utils/validation";
 import styles from './Form.module.css';
+import Frases from '../frases/Frases';
 
 const Form = ({ login }) => {
 
@@ -38,45 +39,53 @@ const Form = ({ login }) => {
   };
 
   return (
-    <div className={styles.form}>
-      <img src="src/assets/image/FormFrase.png" width="50%"  />
+    <div className={styles.body}> 
 
-      <form onSubmit={hanleSubmit}>
-        <label> Email </label>
-        <input
-          className={styles.input}
-          type="text"
-          key="email"
-          name="email"
-          value={userData.email}
-          // placeholder="Ingrese su email"
-          onChange={handleChange}
-        />
-        
-        {errors.email && <p className={styles.error}>{errors.email}</p>}
-        <hr className={styles.hr} />
-
-        <label> Password </label>
-        <input
-          className={styles.input}
-          type="password"
-          key="password"
-          name="password"
-          // placeholder="ingrese su contraseña"
-          value={userData.password}
-          onChange={handleChange}
-        />
-        {errors.email && <p className={styles.error}>{errors.password}</p>}
-
-        <hr className={styles.hr} />
-        
-        <button 
-        className={styles.button}
-        type="submit"
-        disabled={ errors.email || errors.password} // Si existe error en email o password deshabilitalo
-        >Ingresar </button>
-      </form>
+    <div>
+      <Frases/>
     </div>
+
+  <div className={styles.form}>
+
+
+    <form onSubmit={hanleSubmit}>
+      <label> Email </label>
+      <input
+        className={styles.input}
+        type="text"
+        key="email"
+        name="email"
+        value={userData.email}
+        // placeholder="Ingrese su email"
+        onChange={handleChange}
+        />
+      
+      {errors.email && <p className={styles.error}>{errors.email}</p>}
+      <hr className={styles.hr} />
+
+      <label> Password </label>
+      <input
+        className={styles.input}
+        type="password"
+        key="password"
+        name="password"
+        // placeholder="ingrese su contraseña"
+        value={userData.password}
+        onChange={handleChange}
+        />
+      {errors.email && <p className={styles.error}>{errors.password}</p>}
+
+      <hr className={styles.hr} />
+      
+      <button 
+      className={styles.button}
+      type="submit"
+      disabled={ errors.email || errors.password} // Si existe error en email o password deshabilitalo
+      > Login </button>
+    </form>
+  </div>
+  <img src="src/assets/image/FormFrase.png" width="50%"  />
+</div>
   );
 };
 

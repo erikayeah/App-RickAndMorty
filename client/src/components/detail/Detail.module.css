@@ -1,4 +1,27 @@
 .container {
+   margin: 10px;
+   margin-top: 100px;
+   padding: 10px;
+   border-radius: 10px;
    display: flex;
-   
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   background: transparent;
+   backdrop-filter: blur(15px);
+   box-shadow: 0 0 5px #F5CEAF, 0 0 10px #F5CEAF, 0 0 15px #F5CEAF;
+  }
+
+  .text{
+   size: 18px;
+   padding: 15px;
+   color: #F5CEAF;
+   text-align: left;
+  }
+
+  .image{
+   border-radius: 16px;
+   margin: 15px;
+   box-shadow: 0 0 2px #F5CEAF, 0 0 2px #F5CEAF, 0 0 5px #F5CEAF;
   }

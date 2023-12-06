@@ -5,4 +5,20 @@
   padding: 1px;
   margin-top: 70px;
   width: 100%;
+  box-sizing: border-box;
  }
+
+ .text{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  size: 17px;
+ }
+
+ .h2{
+  color: #E6CFBD ;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  padding: 10px;
+  border-radius: 30px;
+}

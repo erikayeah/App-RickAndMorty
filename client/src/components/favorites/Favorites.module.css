@@ -1,19 +1,46 @@
-
-.container{
+.container {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-evenly;
-   background-color: aqua;
-   margin-top: 80px;
-  }
-
-
-.containerCard {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   padding: 15px;
-   margin-top: 30px;
+   padding: 1px;
+   margin-top: 20px;
    width: 100%;
-   background-color: aqua;
+   box-sizing: border-box;
   }
+
+  .select {
+   font-family: 'Patrick Hand SC';
+   --glow-color: #f76ab5;
+   --glow-spread-color: rgba(191, 123, 255, 0.781);
+   --enhanced-glow-color: rgb(231, 206, 255);
+   --btn-color: #0f0008;
+   border: .1em solid var(--glow-color);
+   padding: 10px;
+   font-weight: bold;
+   color: var(--glow-color);
+   font-size: 20px;
+   margin: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+   background-color: var(--btn-color);
+   border-radius: 10px;
+   outline: none;
+  box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
+              0 0 1em 0.2em var(--glow-spread-color), 
+              inset 0 0 0.1em 0.05em var(--glow-color); 
+   text-shadow: 0 0 .1em var(--glow-color);
+   position: relative;
+   transition: all 0.5s;
+   opacity: 0.72;
+   cursor: pointer;
+  }
+
+
+
+ .h2{
+   color: #E6CFBD;
+   background: transparent;
+   backdrop-filter: blur(8px);
+   padding: 10px;
+   border-radius: 30px;
+ }

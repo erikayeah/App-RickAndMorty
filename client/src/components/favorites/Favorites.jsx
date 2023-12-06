@@ -20,17 +20,17 @@ const Favorites = ({onClose}) => {
 
    return (
 
-   <div className={style.container}> 
+   <div> 
          {/* DIV que encierra todo */}
 
          <div>
             {/* div que encierra filtros */}
-            <select name="order" onChange={handleOrder}>
+            <select className={style.select} name="order" onChange={handleOrder}>
                <option value="A"> Ascendente </option>
                <option value="D"> Descendente </option>
             </select>
 
-            <select name="filter" onChange={handleFilter}>
+            <select className={style.select} name="filter" onChange={handleFilter}>
                <option value="All"> All </option>
                <option value="Male"> Male </option>
                <option value="Female"> Female </option>
@@ -39,11 +39,11 @@ const Favorites = ({onClose}) => {
             </select>
          </div>
 
-         <div className = {style.containerCard}> 
+         <div className = {style.container}> 
           {/* DIV DEL CARD */}
 
             { !myFavorites.length
-            ? <h2> No hay favoritos </h2>
+            ? <h2 className={style.h2} >Add your first favorite! </h2>
             :
             myFavorites.map(char => ( //Tmb podria ir con destructuring de las propiedades que quisiera q saque de cada char({name, status, gender, etc})
             //OJO: Aca uso directo () para volver a jsx y renderizar codigo html entre los parentesis.
