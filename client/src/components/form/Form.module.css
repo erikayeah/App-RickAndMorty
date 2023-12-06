@@ -3,8 +3,9 @@
 }
 .form {
   border-radius: 10px;
-  color: #fff5cb;
+  color: #853593;
   font-size: 25px;
+  font-weight: bold;
   padding: 20px;
   padding-bottom: 25px;
   margin-top: 20px;
@@ -12,19 +13,18 @@
   box-shadow: 0 0 25px #fff5cb;
   transition: 0.5s;
   transition-property: box-shadow;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
-.form:hover {
+/* .form:hover {
   box-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb,
     0 0 100px #fff5cb;
-}
+} */
 
 .error {
-  color: #9e47ae;
-  /* font-weight: bold; */
+  color: #fff5cb;
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .hr {
