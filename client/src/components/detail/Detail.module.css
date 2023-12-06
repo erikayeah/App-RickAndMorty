@@ -10,18 +10,18 @@
    box-sizing: border-box;
    background: transparent;
    backdrop-filter: blur(15px);
-   box-shadow: 0 0 5px #F5CEAF, 0 0 10px #F5CEAF, 0 0 15px #F5CEAF;
+   box-shadow: 0 0 5px #e28cba, 0 0 10px #e28cba, 0 0 15px #e28cba;
   }
 
   .text{
    size: 18px;
    padding: 15px;
-   color: #F5CEAF;
+   color: #e28cba;
    text-align: left;
   }
 
   .image{
    border-radius: 16px;
    margin: 15px;
-   box-shadow: 0 0 2px #F5CEAF, 0 0 2px #F5CEAF, 0 0 5px #F5CEAF;
+   box-shadow: 0 0 2px #e28cba, 0 0 2px #e28cba, 0 0 5px #e28cba;
   }

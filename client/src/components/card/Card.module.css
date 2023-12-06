@@ -4,7 +4,7 @@
   color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
   border-radius: 13px;
-  border: 2px solid #EB58A7;
+  border: 2px solid #9B0A58;
   padding: 10px; 
   width: 200px;
   margin: 10px;
@@ -14,7 +14,7 @@
   }
   
   .containerCard:hover {
-     box-shadow: 0 0 0.5rem #EB58A7 , 0 0 0.5rem #EB58A7 , 0 0 0.5rem #EB58A7;
+     box-shadow: 0 0 0.2rem #9B0A58 , 0 0 0.2rem #9B0A58 , 0 0 0.2rem #9B0A58;
      transition: 1s;
      color: black;
      transform: scale(1.05); 
@@ -28,7 +28,7 @@
     }
     
     .nameCard {
-    color: #EB58A7;
+    color: #e28cba;
     font-size: 18px;
     border-radius: 50px;
     padding: 5px;
@@ -44,8 +44,8 @@
   
   .buttonCard {
      background-color: #55002e; 
-     border: 2px solid #EB58A7;
-     color: #EB58A7 ;
+     border-color: #9B0A58;
+     color: #9B0A58 ;
      padding: 10px 15px;
      border-radius: 50%; 
      cursor: pointer; 
@@ -60,7 +60,7 @@
   
    
    .buttonCard:hover {
-     background-color: #EB58A7 ; /* Cambia el fondo al pasar el cursor */
-     border: 2px solid #EB58A7;
+     background-color: #9B0A58 ; /* Cambia el fondo al pasar el cursor */
+     border: 2px solid #9B0A58;
     color: rgb(255, 255, 255);
    }

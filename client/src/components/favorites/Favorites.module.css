@@ -10,8 +10,8 @@
 
   .select {
     font-family: 'Orbitron', sans-serif;
-   --glow-color: #f76ab5;
-   --glow-spread-color: rgba(191, 123, 255, 0.781);
+   --glow-color: #29b8bc;
+   --glow-spread-color: rgba(150, 228, 190, 0.781);
    --enhanced-glow-color: rgb(231, 206, 255);
    --btn-color: #0f0008;
    border: .1em solid var(--glow-color);
@@ -26,7 +26,7 @@
    border-radius: 10px;
    outline: none;
   box-shadow: 0 0 0.2em 0.1em var(--glow-color), 
-              0 0 1em 0.2em var(--glow-spread-color), 
+              0 0 0.3em 0.1em var(--glow-spread-color), 
               inset 0 0 0.1em 0.05em var(--glow-color); 
    text-shadow: 0 0 .1em var(--glow-color);
    position: relative;
