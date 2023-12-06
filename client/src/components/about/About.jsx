@@ -5,12 +5,12 @@ const About = () => {
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner}>
         <div className={styles.flipCardFront}>
-          <h3>App created by</h3>
-          <h1>Erika Judith Fogar</h1>
+          <h3 className={styles.h3} >App created by</h3>
+          <h1 className={styles.h1} >Erika Judith Fogar</h1>
         </div>
         <div className={styles.flipCardBack}>
-          <div className={styles.Description}>
-            <p className={styles.Description}>
+          <div className={styles.description}>
+            <p className={styles.description}>
               Hello, I am full stack developer. I specialize in building
               scalable, high-performance web applications using modern web
               technologies such as React, Express, and Node.js.

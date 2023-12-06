@@ -24,7 +24,7 @@ body {
   background-position: center; /* Centra la imagen en la pantalla */
   background-attachment: fixed; /* Fija la imagen en su posición para que se comporte como un fondo */
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  font-family: 'Patrick Hand SC';
+  font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
   
 }

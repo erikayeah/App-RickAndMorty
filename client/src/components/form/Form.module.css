@@ -1,26 +1,28 @@
 .body{
   width: fit-content;
+  font-family: 'Orbitron', sans-serif;
   
 }
 .form {
   border-radius: 50%;
-  color: #853593;
-  font-size: 25px;
+  color: #48158F;
+  font-size: 20px;
   font-weight: bold;
   padding: 60px;
   margin-top: 20px;
-  background-color: rgba(210, 201, 216, 0.1);
-  box-shadow: 0 0 25px #fff5cb;
+  background-color: transparent;
+  /* box-shadow: 0 0 10px #fff5cb; */
   transition: 0.5s;
   transition-property: box-shadow;
-  margin-bottom: 80px;
-  margin-left: 140px;
+  margin-bottom: 70px;
+  margin-left: 120px;
   margin-right: 140px;
+  
 }
 
 .form:hover {
-  box-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb,
-    0 0 100px #fff5cb;
+  box-shadow: 0 0 5px #fff5cb, 0 0 20px #fff5cb, 0 0 40px #fff5cb,
+    0 0 80px #fff5cb;
 }
 
 .error {
@@ -34,7 +36,6 @@
 
 .button {
   padding: 10px 20px;
-  font-family: 'Lato';
   margin-top: 20px;
   border: none;
   font-size: 17px;
@@ -45,8 +46,9 @@
   transition: 0.5s;
   transition-property: box-shadow;
   cursor: pointer;
-  background: #9e47ae;
+  background-color: rgba(158, 71, 174, 0.5);
   box-shadow: 0 0 25px #fff5cb;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .button:hover {
@@ -61,16 +63,12 @@
   padding-left: 0.8em;
   outline: none;
   overflow: hidden;
-  background-color: #9e47ae;
-  border-radius: 10px;
+  background-color: transparent;
+ 
   transition: all 0.5s;
   position: center;
   color: #fff5cb;
+  border-bottom: 2px solid #48158F;
+  font-size: 14px;
+  font-family: 'Orbitron', sans-serif;
 }
-
-.input:hover,
-.input:focus {
-  border: 2px solid #72007a;
-  background-color: #9e47ae;
-}
-

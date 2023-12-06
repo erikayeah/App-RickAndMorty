@@ -1,18 +1,18 @@
 .button {
    padding: 10px 15px;
-   font-family: 'Lato';
    border: none;
-   font-size: 15px;
-   color: #fff5cb;
+   font-size: 13px;
+   color: #FEF9CF;
    border-radius: 7px;
-   font-weight: bold;
    text-transform: uppercase;
    transition: 0.5s;
    transition-property: box-shadow;
    background: transparent;
    backdrop-filter: blur(1px);
-   box-shadow: 0 0 10px #fff5cb;
+   box-shadow: 0 0 10px #FEF9CF;
    cursor: pointer;
+   font-family: 'Orbitron', sans-serif;
+   font-weight: bolder;
  }
  
  .button:hover {
@@ -25,7 +25,7 @@
    width: 600px; 
   height: 200px; 
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-left:40px;
    /* justify-content: center;
    align-items: center;
@@ -34,24 +34,23 @@
 
  .frase{
    margin-right: 40px;
-   font-size: 25px;
+   font-size: 22px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    width: 440px; /* Establece un ancho fijo */
   height: 200px;
-  font-family: 'Patrick Hand SC';
-  font-style: italic;
   border-radius: 40px;
-  color: #fff5cb;
+  color: #FEF9CF;
   transition: 1s;
   transition-property: text-shadow;
   font-weight: bolder;
   background-color: transparent;
   backdrop-filter: blur(4px);
+  font-family: 'Orbitron', sans-serif;
 }
 
 .frase:hover {
-  text-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb, 0 0 100px #fff5cb;
+  text-shadow: 0 0 2px #fff5cb, 0 0 10px #fff5cb, 0 0 20px #fff5cb, 0 0 40px #fff5cb;
    
 }

@@ -83,7 +83,7 @@ const Form = ({ login }) => {
       > Login </button>
     </form>
   </div>
-  <img src="src/assets/image/FormFrase.png" width="50%"  />
+  {/* <img src="src/assets/image/FormFrase.png" width="20%"  /> */}
 </div>
   );
 };

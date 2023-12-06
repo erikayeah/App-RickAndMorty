@@ -1,8 +1,8 @@
 
 .button {
-   font-family: 'Patrick Hand SC';
-   --glow-color: #f76ab5;
-   --glow-spread-color: rgba(191, 123, 255, 0.781);
+   font-family: 'Orbitron', sans-serif;
+   --glow-color: #27FEFA;
+   --glow-spread-color: rgba(152, 202, 230, 0.781);
    --enhanced-glow-color: rgb(231, 206, 255);
    --btn-color: #0f0008;
    border: .1em solid var(--glow-color);
@@ -41,8 +41,8 @@
  
 .input{
    font-family: 'Patrick Hand SC';
-   --glow-color: #f76ab5;
-   --glow-spread-color: rgba(191, 123, 255, 0.781);
+   --glow-color: #27FEFA;
+   --glow-spread-color: rgba(152, 202, 230, 0.781);
    --enhanced-glow-color: rgb(231, 206, 255);
    --btn-color: #0f0008;
    border: .1em solid var(--glow-color);
@@ -61,4 +61,5 @@
    transition: all 0.5s;
    opacity: 0.72;
    font-weight: bold;
+   font-family: 'Orbitron', sans-serif;
 }
