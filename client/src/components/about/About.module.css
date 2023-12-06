@@ -33,7 +33,7 @@
  
  .flipCardFront {
    background: transparent;
-   border: 4px solid #DF3F80;
+   border: 4px solid #22C0C1;
    backdrop-filter: blur(9px); 
  }
   
@@ -48,7 +48,7 @@
  
  .flipCardBack {
    background-color: #240d29;
-   border: 4px solid #DF3F80;
+   border: 4px solid #22C0C1;
    transform: rotateY(180deg);
    padding: 11px;
    background: transparent;
@@ -65,11 +65,11 @@
  }
 
  h1{
-  color: #d582a4;
+  color: #EED7C6;
  }
 
  h3{
-  color: #d582a4;
+  color: #EED7C6;
  }
  
  .icon {
@@ -99,7 +99,7 @@
  }
  
  .socialbar svg:hover {
-   color: #930B5F;
+   color: #22C0C1;
  }
  
  .flipCard:hover .flipCardInner {

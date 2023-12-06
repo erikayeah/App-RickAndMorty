@@ -13,7 +13,7 @@
   margin-bottom: 10px;
   z-index: 1;
   background: transparent;
-backdrop-filter: blur(50px);
+backdrop-filter: blur(20px);
   
 }
 
@@ -21,8 +21,8 @@ backdrop-filter: blur(50px);
 
 .button {
   font-family: 'Orbitron', sans-serif;
-  --glow-color: #DF3F80;
-  --glow-spread-color: rgba(239, 105, 192, 0.781);
+  --glow-color: #27FEFA;
+  --glow-spread-color: rgba(133, 210, 220, 0.781);
   --enhanced-glow-color: rgb(231, 206, 255);
   --btn-color: #0f0008;
   border: .1em solid var(--glow-color);

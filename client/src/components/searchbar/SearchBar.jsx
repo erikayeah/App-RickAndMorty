@@ -27,9 +27,9 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
 
    return (
       <div>
-         <button className={styles.button} onClick={() => onSearch(handleRandom())}> 🎁 </button> 
-         {/* Lo traigo dsp de una funcion flecha porque tengo q pasar una funcion que ejecute a esa funcion, si no se va aejecutar apenas monto el componente. */}
-         
+         <button className={styles.button} onClick={handleClear}>Clear</button> 
+
+         <button className={styles.button} onClick={handleClick}>Add</button> 
          
          <input
          placeholder='ID' 
@@ -42,9 +42,8 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
          />
       
 
-         <button className={styles.button} onClick={handleClick}>Add</button> 
-
-         <button className={styles.button} onClick={handleClear}>Clear</button> 
+         <button className={styles.button} onClick={() => onSearch(handleRandom())}> Random </button> 
+         {/* Lo traigo dsp de una funcion flecha porque tengo q pasar una funcion que ejecute a esa funcion, si no se va aejecutar apenas monto el componente. */}
       </div>
    );
 }

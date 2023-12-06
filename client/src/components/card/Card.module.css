@@ -7,7 +7,7 @@
   border: 2px solid #DF3F80;
   padding: 10px; 
   width: 200px;
-  margin: 10px;
+  margin: 15px;
   background: transparent;
   backdrop-filter: blur(8px);
   
@@ -28,7 +28,7 @@
     }
     
     .nameCard {
-    color: #DF3F80;
+    color: #22C0C1;
     font-size: 18px;
     border-radius: 50px;
     padding: 5px;
@@ -44,23 +44,21 @@
   
   .buttonCard {
      background-color: #55002e; 
-     border-color: #DF3F80;
-     color: #DF3F80 ;
+     /* border-color: #DF3F80; */
      padding: 10px 15px;
      border-radius: 50%; 
      cursor: pointer; 
-     font-size: 18px; 
      text-align: center; 
-     display: inline-block; 
      margin: 5px;
      margin-left: 10px;
      margin-right: 10px;
      margin-bottom: 30px;
+     border: 1px solid #9c2d5a;
    }
   
    
    .buttonCard:hover {
-     background-color: #DF3F80 ; /* Cambia el fondo al pasar el cursor */
-     border: 2px solid #DF3F80;
-    color: rgb(255, 255, 255);
+     background-color: #22C0C1 ; 
+     border: 1px solid #22C0C1;
+
    }

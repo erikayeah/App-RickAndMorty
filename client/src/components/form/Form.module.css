@@ -14,15 +14,15 @@
   /* box-shadow: 0 0 10px #fff5cb; */
   transition: 0.5s;
   transition-property: box-shadow;
-  marginBottom: 70px;
-  margin-left: 120px;
-  margin-right: 140px;
+  margin-bottom: 70px;
+  margin-left: 82px;
+  margin-right: 120px;
   
 }
 
 .form:hover {
-  box-shadow: 0 0 5px #fff5cb, 0 0 20px #fff5cb, 0 0 40px #fff5cb,
-    0 0 80px #fff5cb;
+  box-shadow: 0 0 5px #6527a7, 0 0 20px #5d2f8e, 0 0 40px #a973e4,
+    0 0 80px #a973e4;
 }
 
 .error {
@@ -96,28 +96,12 @@
 }
 
 ::placeholder {
-  color: #933FAD; /* Cambia el color del texto del marcador de posición */
+  color: #8e3aa8; /* Cambia el color del texto del marcador de posición */
   font-size: 16px;
 }
 
 /* Estilo específico para un input con una clase específica */
 .inputBox::placeholder {
   font-family: 'Orbitron', sans-serif;
+  color: #8e3aa8; /* Cambia el color del texto del marcador de posición */
 }
-
-/* .input {
-  border: 2px solid transparent;
-  width: 11em;
-  height: 1.8em;
-  padding-left: 0.8em;
-  outline: none;
-  overflow: hidden;
-  background-color: transparent;
- 
-  transition: all 0.5s;
-  position: center;
-  color: #fff5cb;
-  borderBottom: 2px solid #48158F;
-  font-size: 14px;
-  font-family: 'Orbitron', sans-serif;
-} */

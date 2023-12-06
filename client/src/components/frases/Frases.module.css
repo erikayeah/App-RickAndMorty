@@ -21,11 +21,11 @@
  }
 
  .container {
-   display: flex;
-   width: 600px; 
+   display: block;
+   width: 400px; 
   height: 200px; 
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
   margin-left:40px;
    /* justify-content: center;
    align-items: center;
@@ -36,9 +36,10 @@
    margin-right: 40px;
    font-size: 22px;
    display: flex;
-   justify-content: space-between;
+
+   justify-content: space-around;
    align-items: center;
-   width: 440px; /* Establece un ancho fijo */
+   width: 400px; /* Establece un ancho fijo */
   height: 200px;
   border-radius: 40px;
   color: #FEF9CF;
