@@ -14,7 +14,7 @@
   /* box-shadow: 0 0 10px #fff5cb; */
   transition: 0.5s;
   transition-property: box-shadow;
-  margin-bottom: 70px;
+  marginBottom: 70px;
   margin-left: 120px;
   margin-right: 140px;
   
@@ -26,13 +26,13 @@
 }
 
 .error {
-  color: #fff5cb;
-  font-size: 16px;
+  color: #933FAD;
+  font-size: 13px;
 }
 
-.hr {
+/* .hr {
   border-style: none;
-}
+} */
 
 .button {
   padding: 10px 20px;
@@ -46,7 +46,7 @@
   transition: 0.5s;
   transition-property: box-shadow;
   cursor: pointer;
-  background-color: rgba(158, 71, 174, 0.5);
+  background-color: #5C1F9C;
   box-shadow: 0 0 25px #fff5cb;
   font-family: 'Orbitron', sans-serif;
 }
@@ -56,7 +56,56 @@
     0 0 100px #fff5cb;
 }
 
-.input {
+
+.inputWrapper {
+  position: relative;
+  width: 200px;
+  margin: 25px auto;
+}
+
+.inputBox {
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #933FAD;
+  color: #5C1F9C;
+  width: 100%;
+  background-color: transparent;
+  transition: border-color 0.4s ease-in-out;
+  font-family: 'Orbitron', sans-serif;
+  
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #5C1F9C;
+  transform: scaleX(0);
+  transition: transform 0.7s ease-in-out;
+}
+
+.inputBox:focus {
+  border-color: #5C1F9C;
+  outline: none;
+}
+
+.inputBox:focus + .underline {
+  transform: scaleX(1);
+}
+
+::placeholder {
+  color: #933FAD; /* Cambia el color del texto del marcador de posición */
+  font-size: 16px;
+}
+
+/* Estilo específico para un input con una clase específica */
+.inputBox::placeholder {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* .input {
   border: 2px solid transparent;
   width: 11em;
   height: 1.8em;
@@ -68,7 +117,7 @@
   transition: all 0.5s;
   position: center;
   color: #fff5cb;
-  border-bottom: 2px solid #48158F;
+  borderBottom: 2px solid #48158F;
   font-size: 14px;
   font-family: 'Orbitron', sans-serif;
-}
+} */
