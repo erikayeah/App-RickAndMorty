@@ -26,6 +26,7 @@
   height: 200px; 
   align-items: center;
   margin-bottom: 40px;
+  margin-left:40px;
    /* justify-content: center;
    align-items: center;
    height: 110px; */
@@ -43,14 +44,14 @@
   font-style: italic;
   border-radius: 40px;
   color: #fff5cb;
-  transition: color 0.9s ease;
+  transition: 1s;
+  transition-property: text-shadow;
   font-weight: bolder;
   background-color: transparent;
   backdrop-filter: blur(4px);
 }
 
 .frase:hover {
-   color: #02B1C8;
-   font-weight: bolder;
+  text-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb, 0 0 100px #fff5cb;
    
 }

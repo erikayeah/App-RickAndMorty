@@ -47,7 +47,6 @@ const Form = ({ login }) => {
 
   <div className={styles.form}>
 
-
     <form onSubmit={hanleSubmit}>
       <label> Email </label>
       <input
