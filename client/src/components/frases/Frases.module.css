@@ -5,7 +5,7 @@
    color: #FEF9CF;
    border-radius: 7px;
    text-transform: uppercase;
-   transition: 0.5s;
+   transition: 0.7s;
    transition-property: box-shadow;
    background: transparent;
    backdrop-filter: blur(1px);
@@ -19,6 +19,10 @@
    box-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb,
      0 0 100px #fff5cb;
  }
+
+ .button:active {
+  transform: translateY(4px); /* Realiza una pequeña traslación hacia abajo al presionar el botón */
+}
 
  .container {
    display: block;
@@ -52,6 +56,6 @@
 }
 
 .frase:hover {
-  text-shadow: 0 0 2px #fff5cb, 0 0 10px #fff5cb, 0 0 20px #fff5cb, 0 0 40px #fff5cb;
+  text-shadow: 0 0 2px #5C1F9C, 0 0 5px #5C1F9C, 0 0 10px #fff5cb, 0 0 20px #fff5cb;
    
 }

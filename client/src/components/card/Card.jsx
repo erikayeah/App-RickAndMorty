@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 
 
-const Card = ({name, id, image, gender, onClose}) => { //destructuring de las pripierdades del objeto props. si no seria props sin {}, y abajo props.name y asi.
+const Card = ({name, id, image, gender, status, onClose}) => { //destructuring de las pripierdades del objeto props. si no seria props sin {}, y abajo props.name y asi.
    
    const dispatch = useDispatch();
    const myFavorites = useSelector(state => state.myFavorites); //Tmb {myFavorites = useSelector (state => state)}, con destructuring.
@@ -59,7 +59,10 @@ if (myFavorites[i].id === props.id) {
          </Link>
          
           <h2 className={style.nameCard}> {name}</h2>
-          {/* <h3>{gender}</h3> */}
+          { status === "Alive"  &&  <h3 className={style.h3}> 😊 {status}</h3>}
+          { status === "Dead"  && <h3 className={style.h3}> 😵 {status}</h3>}
+          { status === "unknown"  && <h3 className={style.h3}> 🤔 {status}</h3>}
+          
       </div>
    );
 }

@@ -32,7 +32,8 @@ const handleClick =(event)=>{{ //Para tener 2 acciones en una misma fn.
          <button className={styles.button} onClick={handleClick}>Add</button> 
          
          <input
-         placeholder='ID' 
+         placeholder='Insert ID' 
+         autoComplete='off'
          className={styles.input}
          type='search' 
          name='search'

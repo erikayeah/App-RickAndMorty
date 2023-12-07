@@ -7,7 +7,7 @@ const Frase = () => {
    "'Nadie existe a propósito. Nadie pertenece a ninguna parte. Todos vamos a morir. Ven a ver la televisión.'",
    "'A veces la ciencia es mucho más arte que ciencia, Morty. Mucha gente no entiende eso'",
    "'Pero los discursos son para hacer campaña. Ahora es el momento para la acción.'",
-    "'Estás creciendo, Morty. Creciendo como una enorme espFrases.jsxina dentro de mi trasero.'",
+    "'Estás creciendo, Morty. Creciendo como una enorme espina dentro de mi trasero.'",
    "'Escucha, Morty, odio decirte esto pero eso que la gente llama «amor» es sólo una reacción química que obliga a los animales a reproducirse.'",
    "'Deberías aprender a tener un poco de respeto por los tontos del universo.'",
    "'Ni lo entiendo, ni necesito entenderlo.'",

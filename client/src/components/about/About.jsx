@@ -2,6 +2,11 @@ import styles from "./About.module.css";
 
 const About = () => {
   return (
+
+    <div className={styles.container}>
+
+   <img className={styles.image} src= "../src/assets/image/FormFrase.png" alt="" />
+
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner}>
         <div className={styles.flipCardFront}>
@@ -75,6 +80,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

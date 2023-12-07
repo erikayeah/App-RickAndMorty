@@ -12,7 +12,7 @@
   margin-top: 20px;
   background-color: transparent;
   /* box-shadow: 0 0 10px #fff5cb; */
-  transition: 0.5s;
+  transition: 2s;
   transition-property: box-shadow;
   margin-bottom: 70px;
   margin-left: 82px;
@@ -21,8 +21,8 @@
 }
 
 .form:hover {
-  box-shadow: 0 0 5px #6527a7, 0 0 20px #5d2f8e, 0 0 40px #a973e4,
-    0 0 80px #a973e4;
+  box-shadow: 0 0 5px #6527a7, 0 0 20px #5d2f8e, 0 0 60px #a973e4,
+    0 0 150px #a973e4;
 }
 
 .error {
@@ -42,20 +42,19 @@
   color: #fff5cb;
   border-radius: 7px;
   font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.5s;
-  transition-property: box-shadow;
-  cursor: pointer;
+  /* text-transform: uppercase; */
+  transition: transform 0.2s ease-in-out;
   background-color: #5C1F9C;
-  box-shadow: 0 0 25px #fff5cb;
   font-family: 'Orbitron', sans-serif;
 }
 
 .button:hover {
-  box-shadow: 0 0 5px #fff5cb, 0 0 25px #fff5cb, 0 0 50px #fff5cb,
-    0 0 100px #fff5cb;
+  cursor: pointer;
 }
 
+.button:active {
+  transform: translateY(4px); /* Realiza una pequeña traslación hacia abajo al presionar el botón */
+}
 
 .inputWrapper {
   position: relative;

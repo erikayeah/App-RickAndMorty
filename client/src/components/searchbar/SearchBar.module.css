@@ -24,7 +24,6 @@
    cursor: pointer;
   }
   
-
   .button:hover {
    color: var(--btn-color);
    background-color: var(--glow-color);
@@ -48,7 +47,7 @@
    border: .1em solid var(--glow-color);
    padding: 10px;
    color: var(--glow-color);
-   font-size: 18px;
+   font-size: 16px;
    margin: 10px;
    background-color: var(--btn-color);
    border-radius: 10px;
@@ -60,12 +59,12 @@
    position: relative;
    transition: all 0.5s;
    opacity: 0.72;
-   font-weight: bold;
    font-family: 'Orbitron', sans-serif;
-   width: 90px;
+   width: 100px;
+
 }
 
 ::placeholder {
-   color: #27FEFA;
-   font-size: 16px;
+   color: #1eaeab;
+   font-size: 14px;
  }

@@ -35,11 +35,7 @@
    cursor: pointer;
   }
 
-  .custom-select option {
-    background-color: #0f0008; /* Fondo de las opciones */
-    color: #E6CFBD; /* Color del texto de las opciones */
-    padding: 10px;
-  }
+
 
  .h2{
    color: #E6CFBD;

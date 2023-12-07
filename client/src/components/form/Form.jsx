@@ -55,6 +55,7 @@ const Form = ({ login }) => {
               name="email"
               value={userData.email}
               placeholder="Enter your email"
+              autoComplete='off'
               // placeholder="Ingrese su email"
               onChange={handleChange}
             />
