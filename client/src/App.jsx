@@ -113,7 +113,7 @@ const login = async (userData) => {
   
   useEffect(() => {
     //* !access && navigate("/"); ASI DEBERIA QUEDAR LUEGO
-    !access && navigate("/"); //Logueo momentaneo automatico: si ya probe que mi logueo anda, pongo esto para no tener q cargar datos cada vez que sigo probando otras cosas. Es hasta antes de sacarlo a produccion.
+    !access && navigate("/home"); //Logueo momentaneo automatico: si ya probe que mi logueo anda, pongo esto para no tener q cargar datos cada vez que sigo probando otras cosas. Es hasta antes de sacarlo a produccion.
   }, [access]);
 
 

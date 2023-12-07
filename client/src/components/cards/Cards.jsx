@@ -6,7 +6,7 @@ const Cards = ({characters, onClose}) => { //porque aca destructuring? porque en
       <div className = {style.container}> 
 
          { !characters.length
-         ? <h2 className={style.h2} > Please enter an ID or receive a surprise character with the random button </h2>
+         ? <h2 className={style.h2} > Please enter an ID or receive a surprise character with the gift button </h2>
          :
          characters.map((char) => ( //Tmb podria ir con destructuring de las propiedades que quisiera q saque de cada char({name, status, gender, etc})
          //OJO: Aca uso directo () para volver a jsx y renderizar codigo html entre los parentesis.

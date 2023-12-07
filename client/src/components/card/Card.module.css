@@ -9,11 +9,12 @@
   margin: 15px;
   background: transparent;
   backdrop-filter: blur(8px);
+  animation: borderAnimation 4s infinite linear; /* Animación con duración de 2 segundos y repetición infinita */
   
   }
   
   .containerCard:hover {
-     box-shadow: 0 0 0.2rem #DF3F80 , 0 0 0.2rem #DF3F80 , 0 0 2rem #DF3F80;
+     box-shadow: 0 0 0.2rem #DF3F80 , 0 0 0.2rem #86fc00 , 0 0 2rem #86fc00;
      transition: 1s;
      color: black;
      transform: scale(1.05); 
@@ -24,13 +25,32 @@
     border-radius: 13px;
     width: 85%;
     margin: 5px;
-    border-color: #DF3F80;
-    border-style: groove;
+    border: 1px solid transparent; /* Borde transparente inicial */
+    position: relative; /* Necesario para posicionar el borde animado correctamente */
+    animation: borderAnimation 3s infinite linear; 
+  }
+  
+  @keyframes borderAnimation {
+    0% {
+      border-color: #DF3F80; /* Color del borde al principio */
     }
+    25% {
+      border-color: #84F600; /* Color del borde después del 25% del tiempo de la animación */
+    }
+    50% {
+      border-color: #3EF7F9; /* Color del borde después del 50% del tiempo de la animación */
+    }
+    75% {
+      border-color: #9E5ADB; /* Color del borde después del 75% del tiempo de la animación */
+    }
+    100% {
+      border-color: #DF3F80; /* Vuelve al color original al final de la animación */
+    }
+  }
 
     
     .nameCard {
-    color: #43dfdf;
+    color: #86fc00;
     font-size: 18px;
     border-radius: 50px;
     padding: 5px;
@@ -43,7 +63,7 @@
       }
     
   .h3 {
-    color: #43dfdf;
+    color: #86fc00;
     font-size: 15px;
   }
   
@@ -63,7 +83,7 @@
   
    
    .buttonCard:hover {
-     background-color: #22C0C1 ; 
-     border: 1px solid #22C0C1;
+     background-color: #8caf64 ; 
+     border: 1px solid #8caf64;
 
    }

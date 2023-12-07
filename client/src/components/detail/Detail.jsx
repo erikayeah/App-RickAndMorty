@@ -27,11 +27,11 @@ const Detail = () => {
 
       <div className={style.text}>
         <h2> {character?.name} </h2>
-        <h3> 🆔 {character?.id}</h3>
+        <h3> 🪪 {character?.id}</h3>
         { character?.status === "Alive"  &&  <h3 className={style.h3}> 😊 {character?.status}</h3>}
           { character?.status === "Dead"  && <h3 className={style.h3}> 😵 {character?.status}</h3>}
           { character?.status === "unknown"  && <h3 className={style.h3}> 🤔 {character?.status}</h3>}
-        <h3> 🦴 {character?.species}</h3>
+        <h3> 🧬 {character?.species}</h3>
         {character?.gender === "Female" && <h3> ♀ {character?.gender} </h3>}
         {character?.gender === "Male" && <h3> ♂ {character?.gender} </h3>}
         {character?.gender === "Genderless" && <h3> ⚧ {character?.gender} </h3>}

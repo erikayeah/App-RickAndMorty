@@ -1,14 +1,24 @@
+.container {
+   font-family: 'Orbitron', sans-serif;
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;
+   /* background-color: rgba(235, 88, 167, 0.2);;  */
+   padding: 10px; 
+   margin-bottom: 10px;
+   background: transparent;
 
+ }
 .button {
    font-family: 'Orbitron', sans-serif;
-   --glow-color: #27FEFA;
-   --glow-spread-color: rgba(152, 202, 230, 0.781);
-   --enhanced-glow-color: rgb(231, 206, 255);
+   --glow-color: #86fc00;
+   --glow-spread-color: rgba(157, 249, 145, 0.781);
+   --enhanced-glow-color: rgb(220, 255, 206);
    --btn-color: #0f0008;
    border: .1em solid var(--glow-color);
    padding: 10px;
    color: var(--glow-color);
-   font-size: 17px;
+   font-size: 23px;
    margin: 10px;
    background-color: var(--btn-color);
    border-radius: 10px;
@@ -40,14 +50,14 @@
  
 .input{
    font-family: 'Patrick Hand SC';
-   --glow-color: #27FEFA;
-   --glow-spread-color: rgba(152, 202, 230, 0.781);
-   --enhanced-glow-color: rgb(231, 206, 255);
+   --glow-color: #86fc00;
+   --glow-spread-color: rgba(157, 249, 145, 0.781);
+  --enhanced-glow-color: rgb(220, 255, 206);
    --btn-color: #0f0008;
    border: .1em solid var(--glow-color);
    padding: 10px;
    color: var(--glow-color);
-   font-size: 16px;
+   font-size: 19px;
    margin: 10px;
    background-color: var(--btn-color);
    border-radius: 10px;
@@ -65,6 +75,6 @@
 }
 
 ::placeholder {
-   color: #1eaeab;
-   font-size: 14px;
+   color: #86fc00 ;
+   font-size: 13px;
  }

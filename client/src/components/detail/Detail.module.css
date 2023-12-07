@@ -10,18 +10,49 @@
    box-sizing: border-box;
    background: transparent;
    backdrop-filter: blur(15px);
-   box-shadow: 0 0 5px #e28cba, 0 0 10px #e28cba, 0 0 15px #e28cba;
+   box-shadow: 0 0 5px #86fc00, 0 0 10px #86fc00, 0 0 40px #86fc00;
   }
+
+
+  .imageCard {
+    border-radius: 13px;
+    width: 85%;
+    margin: 5px;
+    border: 2px solid transparent; /* Borde transparente inicial */
+    position: relative; /* Necesario para posicionar el borde animado correctamente */
+    animation: borderAnimation 2s infinite linear; /* Animación con duración de 2 segundos y repetición infinita */
+  }
+  
+  @keyframes borderAnimation {
+    0% {
+      border-color: #DF3F80; /* Color del borde al principio */
+    }
+    25% {
+      border-color: #84F600; /* Color del borde después del 25% del tiempo de la animación */
+    }
+    50% {
+      border-color: #3EF7F9; /* Color del borde después del 50% del tiempo de la animación */
+    }
+    75% {
+      border-color: #9E5ADB; /* Color del borde después del 75% del tiempo de la animación */
+    }
+    100% {
+      border-color: #D7C658; /* Vuelve al color original al final de la animación */
+    }
+  }
+
+
 
   .text{
    size: 18px;
    padding: 15px;
-   color: #e28cba;
+   color: #86fc00;
    text-align: left;
   }
 
   .image{
    border-radius: 16px;
    margin: 15px;
-   box-shadow: 0 0 2px #e28cba, 0 0 2px #e28cba, 0 0 5px #e28cba;
+   box-shadow: 0 0 2px #86fc00, 0 0 2px #86fc00, 0 0 5px #86fc00;
   }
+

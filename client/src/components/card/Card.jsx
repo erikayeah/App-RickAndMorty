@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {removeFav, addFav} from '../../redux/action'
 import { useState, useEffect } from 'react';
+import { MdFavoriteBorder } from "react-icons/md";
 
 
 
@@ -48,7 +49,7 @@ if (myFavorites[i].id === props.id) {
    return (
       <div className={style.containerCard}>
 
-         {isFav ? (<button className={style.buttonCard} onClick={handleFavorite}>❤️</button>) 
+         {isFav ? (<button className={style.buttonCard} onClick={handleFavorite}>❤️</button> ) 
          : (<button className={style.buttonCard} onClick={handleFavorite}>🤍</button>)}
 
          {/* {pathname !== '/favorites' ? <button onClick={() => onClose(id) }> X </button> : ''} */}
