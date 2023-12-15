@@ -11,8 +11,10 @@ node_modules
 /client/node_modules
 /server/node_modules
 /READMES
+/PRUEBAS
 dist
 dist-ssr
+.env
 *.local
 
 # Editor directories and files
