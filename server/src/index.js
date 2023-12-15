@@ -21,7 +21,7 @@ server.use((req, res, next) => {
          );
          next();
       });
-      server.use(express.json());
+      server.use(express.json()); //Para usar y recibir info por body.
       server.use(morgan("dev"));
       
       server.use("/rickandmorty", router);
