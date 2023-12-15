@@ -53,8 +53,11 @@ const Favorites = ({onClose}) => {
             key = {char.id} //Lakey aparece cuando creamos las tarjetitas, no en el componente Card, si no aca.
             id= {char.id}
             name = {char.name}
-            image = {char.image}
+            status = {char.status}
+            species = {char.species}
             gender = {char.gender}
+            origin = {char.origin}
+            image = {char.image}
             onClose={onClose}
             />
             ))

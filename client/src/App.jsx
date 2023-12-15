@@ -120,7 +120,7 @@ const login = async (userData) => {
 
   return (
     <div className="App">
-      {pathname !== "/" ? <Nav onSearch={onSearch} logout={logout} clear ={clear} /> : null}
+      {pathname !== "/" && <Nav onSearch={onSearch} logout={logout} clear ={clear} /> }
 
       <Routes>
         <Route path="/" element={<Form login={login} />} />

@@ -7,7 +7,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 
 
 
-const Card = ({name, id, image, gender, status, onClose}) => { //destructuring de las pripierdades del objeto props. si no seria props sin {}, y abajo props.name y asi.
+const Card = ({name, id, image, gender, status, species, origin, onClose}) => { //destructuring de las pripierdades del objeto props. si no seria props sin {}, y abajo props.name y asi.
    
    const dispatch = useDispatch();
    const myFavorites = useSelector(state => state.myFavorites); //Tmb {myFavorites = useSelector (state => state)}, con destructuring.
@@ -37,7 +37,7 @@ if (myFavorites[i].id === props.id) {
          dispatch(removeFav(id)); //Si yo no hubiera hecho destructuring ariba, esto seria props.id
       } else {
          setIsFav(true);
-         dispatch(addFav({name, id, gender,image, onClose})); //Mismo caso si no hubiera hecho destructuring, seria props solo.
+         dispatch(addFav({name, id, gender,image, status, origin, species, onClose})); //Mismo caso si no hubiera hecho destructuring, seria props solo.
       }
    };
 /*Version en ternario
