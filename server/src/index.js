@@ -26,11 +26,15 @@ server.use((req, res, next) => {
       server.use(morgan("dev"));
 
     // Servir archivos estáticos desde el directorio 'public' y 'src'
+    server.use(express.static(path.join(__dirname, 'client', 'dist')));
 server.use(express.static(path.join(__dirname, 'public'))); // 'public' directory
 server.use(express.static(path.join(__dirname, 'src'))); // 'src' directory
-
       
       server.use("/rickandmorty", router);
+
+      server.get('*', (req, res) => {
+         res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+       });
       
       //* Sincronizar la instancia de sequelize al servidor, que al levantar servidor se sincronice a la BD.
       conn.sync({ force: false}) //Retorna una promesa
