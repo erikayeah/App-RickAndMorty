@@ -27,8 +27,6 @@ server.use((req, res, next) => {
 
     // Servir archivos estáticos desde el directorio 'public' y 'src'
     server.use(express.static(path.join(__dirname, 'client', 'dist')));
-server.use(express.static(path.join(__dirname, 'public'))); // 'public' directory
-server.use(express.static(path.join(__dirname, 'src'))); // 'src' directory
       
       server.use("/rickandmorty", router);
 
