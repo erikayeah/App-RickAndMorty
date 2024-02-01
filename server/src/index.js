@@ -23,6 +23,14 @@ server.use((req, res, next) => {
       });
       server.use(express.json()); //Para usar y recibir info por body.
       server.use(morgan("dev"));
+
+      server.use(express.static('public', {
+         setHeaders: (res, path) => {
+            if (path.endsWith('.js')) {
+               res.setHeader('Content-Type', 'application/javascript');
+            }
+         }
+      }));
       
       server.use("/rickandmorty", router);
       
