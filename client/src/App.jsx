@@ -98,7 +98,10 @@ const login = async (userData) => {
      }
     };
 
-
+const guest = () => {
+  setAccess(true);
+  navigate('/home');
+}
 
   const logout = () => {
     setAccess(false);
@@ -123,7 +126,7 @@ const login = async (userData) => {
       {pathname !== "/" && <Nav onSearch={onSearch} logout={logout} clear ={clear} /> }
 
       <Routes>
-        <Route path="/" element={<Form login={login} />} />
+        <Route path="/" element={<Form login={login} guest={guest}/>} />
         <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />

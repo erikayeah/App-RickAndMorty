@@ -3,7 +3,7 @@ import validation from "../../utils/validation";
 import styles from "./Form.module.css";
 import Frases from "../frases/Frases";
 
-const Form = ({ login }) => {
+const Form = ({ login, guest }) => {
   useEffect(() => {
     document.body.style.backgroundImage = `url('/src/assets/image/form.jpg')`;
     return () => {
@@ -37,6 +37,13 @@ const Form = ({ login }) => {
     login(userData);
   };
 
+
+  const handleGuest = (event) => {
+   guest()
+  };
+
+
+
   return (
     <div className={styles.body}>
       <div>
@@ -46,7 +53,6 @@ const Form = ({ login }) => {
       <div className={styles.form}>
         <form onSubmit={hanleSubmit}>
 
-          {/* <label> Email </label> */}
           <div className={styles.inputWrapper}>
             <input
               className={styles.inputBox}
@@ -56,16 +62,13 @@ const Form = ({ login }) => {
               value={userData.email}
               placeholder="Enter your email"
               autoComplete='off'
-              // placeholder="Ingrese su email"
               onChange={handleChange}
             />
             <span className={styles.underline}></span>
           </div>
           {errors.email && <p className={styles.error}>{errors.email}</p>}
 
-          {/* <hr className={styles.hr} /> */}
-
-          {/* <label> Password </label> */}
+   
           <div className={styles.inputWrapper}>
             <input
               className={styles.inputBox}
@@ -73,27 +76,28 @@ const Form = ({ login }) => {
               key="password"
               name="password"
               placeholder="Enter your password"
-              // placeholder="ingrese su contraseña"
+   
               value={userData.password}
               onChange={handleChange}
             />
             <span className={styles.underline}></span>
           </div>
           {errors.email && <p className={styles.error}>{errors.password}</p>}
-{/* 
-          <hr className={styles.hr} /> */}
+
 
           <button
             className={styles.button}
             type="submit"
-            disabled={errors.email || errors.password} // Si existe error en email o password deshabilitalo
+            disabled={errors.email || errors.password}
           >
             {" "}
             Login{" "}
           </button>
         </form>
+
+        <button  className={styles.button} onClick={handleGuest}> Enter as a guest </button>
       </div>
-      {/* <img src="src/assets/image/FormFrase.png" width="20%"  /> */}
+   
     </div>
   );
 };
