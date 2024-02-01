@@ -5,7 +5,7 @@ const router = require("./routes");
 const path = require("path");
 const server = express();
 const PORT = 1000;
-const {conn} =require("./DB_connection");
+const {conn} =require("./DB_connection.js");
 
 
 //* Middlewares
