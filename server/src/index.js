@@ -3,7 +3,7 @@ const morgan = require("morgan"); // instalar morgan
 const router = require("./routes");
 //* const router = require("./routes/index.js");
 const server = express();
-const PORT = 3001;
+const PORT = 1000;
 const {conn} =require("./DB_connection");
 
 
