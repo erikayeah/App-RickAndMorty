@@ -35,7 +35,7 @@ const App = () => {
           return alert(`${characterId[0].name} ya existe!`)
        }
 
-       const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+       const { data } = await axios(`http://localhost:1000/rickandmorty/character/${id}`);
        if (data.name) {
           setCharacters([...characters, data]);
           navigate("/home");
