@@ -2,6 +2,7 @@ const express = require("express"); //instalar express
 const morgan = require("morgan"); // instalar morgan
 const router = require("./routes");
 //* const router = require("./routes/index.js");
+const path = require("path");
 const server = express();
 const PORT = 1000;
 const {conn} =require("./DB_connection");
@@ -24,13 +25,10 @@ server.use((req, res, next) => {
       server.use(express.json()); //Para usar y recibir info por body.
       server.use(morgan("dev"));
 
-      server.use(express.static('public', {
-         setHeaders: (res, path) => {
-            if (path.endsWith('.js')) {
-               res.setHeader('Content-Type', 'application/javascript');
-            }
-         }
-      }));
+    // Servir archivos estáticos desde el directorio 'public' y 'src'
+server.use(express.static(path.join(__dirname, 'public'))); // 'public' directory
+server.use(express.static(path.join(__dirname, 'src'))); // 'src' directory
+
       
       server.use("/rickandmorty", router);
       
