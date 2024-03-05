@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import validation from "../../utils/validation";
 import styles from "./Form.module.css";
 import Frases from "../frases/Frases";
+import form from "../../assets/image/form.jpg";
 
 const Form = ({ login, guest }) => {
   useEffect(() => {
-    document.body.style.backgroundImage = `url('/src/assets/image/form.jpg')`;
+    document.body.style.backgroundImage = { form };
     return () => {
       document.body.style.backgroundImage = null;
     };
@@ -37,12 +38,9 @@ const Form = ({ login, guest }) => {
     login(userData);
   };
 
-
   const handleGuest = (event) => {
-   guest()
+    guest();
   };
-
-
 
   return (
     <div className={styles.body}>
@@ -52,7 +50,6 @@ const Form = ({ login, guest }) => {
 
       <div className={styles.form}>
         <form onSubmit={hanleSubmit}>
-
           <div className={styles.inputWrapper}>
             <input
               className={styles.inputBox}
@@ -61,14 +58,13 @@ const Form = ({ login, guest }) => {
               name="email"
               value={userData.email}
               placeholder="Enter your email"
-              autoComplete='off'
+              autoComplete="off"
               onChange={handleChange}
             />
             <span className={styles.underline}></span>
           </div>
           {errors.email && <p className={styles.error}>{errors.email}</p>}
 
-   
           <div className={styles.inputWrapper}>
             <input
               className={styles.inputBox}
@@ -76,14 +72,12 @@ const Form = ({ login, guest }) => {
               key="password"
               name="password"
               placeholder="Enter your password"
-   
               value={userData.password}
               onChange={handleChange}
             />
             <span className={styles.underline}></span>
           </div>
           {errors.email && <p className={styles.error}>{errors.password}</p>}
-
 
           <button
             className={styles.button}
@@ -95,9 +89,11 @@ const Form = ({ login, guest }) => {
           </button>
         </form>
 
-        <button  className={styles.button} onClick={handleGuest}> Enter as a guest </button>
+        <button className={styles.button} onClick={handleGuest}>
+          {" "}
+          Enter as a guest{" "}
+        </button>
       </div>
-   
     </div>
   );
 };
