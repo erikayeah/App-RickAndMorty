@@ -1,10 +1,10 @@
 import { ADD_FAV, FILTER, ORDER, REMOVE_FAV } from "./action-types";
 import axios from "axios";
 
-const VITE_URL_API = "https://app-rickandmorty-xyvj.onrender.com";
+const URL_API = import.meta.env.VITE_URL_API;
 
 export const addFav = (character) => {
-  const endpoint = `${VITE_URL_API}/rickandmorty/fav`;
+  const endpoint = `${URL_API}/rickandmorty/fav`;
   return async (dispatch) => {
     try {
       const { data } = await axios.post(endpoint, character);
@@ -27,7 +27,7 @@ export const addFav = (character) => {
 export const removeFav = (id) => {
   return async (dispatch) => {
     try {
-      const endpoint = `${VITE_URL_API}/rickandmorty/fav/${id}`;
+      const endpoint = `${URL_API}/rickandmorty/fav/${id}`;
       const { data } = await axios.delete(endpoint);
 
       dispatch({

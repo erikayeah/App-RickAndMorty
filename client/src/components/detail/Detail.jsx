@@ -2,14 +2,14 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import style from "./Detail.module.css";
-const VITE_URL_API = "https://app-rickandmorty-xyvj.onrender.com";
+const URL_API = import.meta.env.VITE_URL_API;
 
 const Detail = () => {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    axios(`${VITE_URL_API}/character/${id}`).then(({ data }) => {
+    axios(`${URL_API}/character/${id}`).then(({ data }) => {
       if (data.name) {
         setCharacter(data);
       } else {
