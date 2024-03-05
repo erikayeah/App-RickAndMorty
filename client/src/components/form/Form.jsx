@@ -6,7 +6,7 @@ import form from "../../assets/image/form.jpg";
 
 const Form = ({ login, guest }) => {
   useEffect(() => {
-    document.body.style.backgroundImage = { form };
+    document.body.style.backgroundImage = `url(${form})`;
     return () => {
       document.body.style.backgroundImage = null;
     };
